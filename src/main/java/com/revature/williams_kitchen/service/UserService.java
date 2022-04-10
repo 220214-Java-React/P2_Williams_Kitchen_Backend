@@ -10,4 +10,13 @@ public class UserService
 {
     @Autowired
     UserRepository userRepository;
+
+    public List<User> getAllUsers() { return userRepository.findAll(); }
+
+    public User findUserById(Integer id)
+    {
+        return userRepository.findById(id).orElse(new User());
+    }
+
+
 }
