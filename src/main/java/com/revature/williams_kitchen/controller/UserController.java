@@ -12,12 +12,10 @@ public class UserController
 {
     @Autowired
     UserService userService;
-
     @PostMapping("/create")
     public void createUserPost(@RequestBody User user) {
         userService.createUser(user);
     }
-
     @GetMapping("/{id}")
     public User findUserById(@PathVariable Integer id) {return userService.findUserById(id);}
 
