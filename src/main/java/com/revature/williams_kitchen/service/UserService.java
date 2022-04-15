@@ -25,4 +25,6 @@ public class UserService
         return userRepository.findById(id).orElse(new User());
     }
 
+    public User findUserByUsername(String name) { return userRepository.findByUsername(name).orElse(new User()); }
+
 }

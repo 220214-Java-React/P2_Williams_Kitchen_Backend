@@ -3,8 +3,11 @@ package com.revature.williams_kitchen.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.revature.williams_kitchen.repository.RecipeRepository;
 import com.revature.williams_kitchen.model.RecipeModel;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class RecipeService {
 
     @Autowired

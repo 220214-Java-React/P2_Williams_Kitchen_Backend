@@ -18,8 +18,16 @@ public class UserController
         userService.createUser(user);
     }
 
-    @GetMapping("/{id}")
-    public User findUserById(@PathVariable Integer id) {return userService.findUserById(id);}
+    @GetMapping("/{identifier}")
+    public User findUserById(@PathVariable String identifier) {
+        try {
+            int id = Integer.parseInt(identifier);
+
+            return userService.findUserById(id);
+        } catch (Exception e) {
+            return userService.findUserByUsername(identifier);
+        }
+    }
 
 
 }
