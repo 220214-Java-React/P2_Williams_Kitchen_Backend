@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "recipe")
+@Entity(name = "wk_recipes")
 @Data
 public class RecipeModel {
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
-@Entity(name = "users")
+@Entity(name = "wk_users")
 @Data
 public class User
 {

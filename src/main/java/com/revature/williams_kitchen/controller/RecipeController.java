@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/recipe")
+@CrossOrigin
 public class RecipeController {
 
     @Autowired
