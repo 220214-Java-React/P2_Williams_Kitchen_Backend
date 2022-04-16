@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ec92c449-a354-464e-8f91-c0d463f9dd6b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/service/UserService.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/controller/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/williams_kitchen/service/RecipeService.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +63,13 @@
     </option>
     <option name="myId2Visible">
       <map>
+<<<<<<< Updated upstream
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+=======
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+>>>>>>> Stashed changes
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
