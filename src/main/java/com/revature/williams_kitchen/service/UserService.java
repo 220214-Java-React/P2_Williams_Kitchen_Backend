@@ -6,9 +6,11 @@ import com.revature.williams_kitchen.repository.UserRepository;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -36,17 +38,30 @@ public class UserService
         return userRepository.findById(id).orElse(new User());
     }
 
+
     public User findUserByUsernameAndPassword(String name, String password) {
         User user = userRepository.findByUsername(name).orElse(new User());
-        System.out.println(user.getPassword());
-        System.out.println(encryptPassword(password));
-        if (user.getPassword().equals(encryptPassword(password))) {
+        System.out.println();
+        System.out.println();
+        if (validatePassword(encryptPassword(password),user.getPassword())) {
 
             return user;
         }
-        return new User();
+        throw new RuntimeException();
     }
 
+    @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Incorrect credentials")
+    public boolean validatePassword(String password,String realPassword) {
+        try{
+            if (!password.equals(realPassword)) {
+                throw new Exception();
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("invalid");
+            return false;
+        }
+    }
 
     public String encryptPassword(String pass) {
         StringBuilder builder = new StringBuilder();

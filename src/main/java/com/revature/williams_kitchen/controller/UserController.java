@@ -6,6 +6,7 @@ import com.revature.williams_kitchen.service.UserService;
 import org.apache.tomcat.util.json.JSONParser;
 import org.apache.tomcat.util.json.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,6 +16,7 @@ public class UserController
 {
     @Autowired
     UserService userService;
+
 
     @PostMapping("/create")
     @CrossOrigin
@@ -37,9 +39,14 @@ public class UserController
             } catch (ParseException er) {
                 System.out.println("er = " + er.getMessage());
             }
+
             return userService.findUserByUsernameAndPassword(identifier, password);
         }
     }
 
 
+
+
 }
+
+
