@@ -19,9 +19,9 @@ public class RecipeModel {
     private String stepsList;
     private String prepTime;
     private String cookTime;
-    private int ingredient1;
-    private int ingredient2;
-    private int ingredient3;
+    private String ingredient1;
+    private String ingredient2;
+    private String ingredient3;
     private String ingredientList;
     private String cuisine;
 }
