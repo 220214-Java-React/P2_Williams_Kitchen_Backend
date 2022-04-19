@@ -27,8 +27,14 @@ dependencies {
 	implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.mockito:mockito-junit-jupiter'
 }
 
-tasks.named('test') {
+tasks.named('test').configure {
 	useJUnitPlatform()
+	systemProperty 'java.util.logging.config.file', "${project.buildDir}/resources/test/logging-test.properties"
+	forkEvery = 1
+	testLogging {
+		showStandardStreams = true
+	}
 }

@@ -1,5 +1,6 @@
 package com.revature.williams_kitchen.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.revature.williams_kitchen.repository.RecipeRepository;
 import com.revature.williams_kitchen.model.RecipeModel;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class RecipeService {
 
     @Autowired

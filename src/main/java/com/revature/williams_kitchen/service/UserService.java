@@ -3,6 +3,7 @@ package com.revature.williams_kitchen.service;
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.revature.williams_kitchen.model.User;
 import com.revature.williams_kitchen.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserService
 {
     @Autowired
