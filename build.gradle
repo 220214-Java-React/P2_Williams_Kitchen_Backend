@@ -25,8 +25,14 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.mockito:mockito-junit-jupiter'
 }
 
-tasks.named('test') {
+tasks.named('test').configure {
 	useJUnitPlatform()
+	systemProperty 'java.util.logging.config.file', "${project.buildDir}/resources/test/logging-test.properties"
+	forkEvery = 1
+	testLogging {
+		showStandardStreams = true
+	}
 }
