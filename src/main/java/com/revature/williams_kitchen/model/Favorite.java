@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "Favorites")
+@Entity(name = "wk_user_favorite")
 @Data
 public class Favorite {
     @Id
@@ -15,6 +15,6 @@ public class Favorite {
     private int favId;
     //-----------------
     private String username;
-    private int recipeId;
-    private String url;
+    private int recipe_id;
+    private String meal_url;
 }

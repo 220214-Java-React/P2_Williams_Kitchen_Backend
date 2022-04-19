@@ -16,10 +16,10 @@ public class User
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private int user_id;
     private String username;
     private String password;
-    private String firstname;
-    private String lastname;
+    private String first_name;
+    private String last_name;
     private String email;
 }

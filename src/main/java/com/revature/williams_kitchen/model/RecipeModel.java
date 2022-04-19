@@ -14,14 +14,16 @@ public class RecipeModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int recipeId;
-    private String recipeName;
-    private String stepsList;
-    private String prepTime;
-    private String cookTime;
-    private String ingredient1;
-    private String ingredient2;
-    private String ingredient3;
-    private String ingredientList;
-    private String cuisine;
+    private int recipe_id;
+    private int author_id;
+    private String recipe_title;
+    private String recipe_steps;
+    private String prep_time;
+    private String cook_time;
+    private String ingredient_1;
+    private String ingredient_2;
+    private String ingredient_3;
+    private String ingredient_list;
+    private String recipes_culture;
+    private String meal_image;
 }
