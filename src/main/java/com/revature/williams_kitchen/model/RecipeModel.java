@@ -22,5 +22,4 @@ public class RecipeModel {
     private String ingredient_3;
     private String ingredient_list;
     private String recipes_culture;
-    private String meal_image;
 }
